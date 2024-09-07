@@ -1,5 +1,5 @@
 import React from "react";
-import { FaExclamation } from "react-icons/fa";
+import { FaExclamation, FaQuoteLeft } from "react-icons/fa";
 import Container from "./Container";
 import {
   Card,
@@ -17,101 +17,109 @@ import {
   CarouselPrevious,
 } from "./carousel";
 import Image from "next/image";
+import { Rating } from "@smastrom/react-rating";
 
 const ClientSection = () => {
   const reviews = [
     {
-      img: "https://i.ibb.co.com/mHh3vbp/Porsche-911-GT3-RS-for-sale-James-Edition.jpg",
-      name: "Luxury Cars",
+      img: "https://i.ibb.co.com/rpPdQZK/Pizza-Man.jpg",
+      name: "John Doe",
       description:
-        "A luxury sports car known for its racing heritage and precision performance.",
+        "Amazing luxury car collection. The attention to detail in each car is top-notch! Will definitely shop here again.",
+      rating: 5,
     },
     {
-      img: "https://i.ibb.co.com/sysxxtN/Chevrolet-Cruze-Sedan-Premier-I-e-II-2020-em-detalhes-Mundo-do-Autom-vel-para-PCD.jpg",
-      name: "Sedan Cars",
+      img: "https://i.ibb.co.com/rpPdQZK/Pizza-Man.jpg",
+      name: "Jane Smith",
       description:
-        "A compact sedan known for its practicality, comfort, and efficiency.",
+        "Great selection of sedan cars! The staff was very helpful and knowledgeable. The store was organized properly",
+      rating: 4,
     },
     {
-      img: "https://i.ibb.co.com/ZK6HkVG/Can-You-Drive-a-Convertible-All-Year-Long-Audi-S5-Cabriolet-Says-Yes-A-Girls-Guide-to-Cars.jpg",
-      name: "Convertible Cars",
+      img: "https://i.ibb.co.com/rpPdQZK/Pizza-Man.jpg",
+      name: "Michael Brown",
       description:
-        "A luxury convertible offering performance and open-top driving experience.",
+        "I loved the convertible selection. The test drive was exhilarating, and the staff made the experience seamless.",
+      rating: 5,
     },
     {
-      img: "https://i.ibb.co.com/F75Dw19/Mc-Laren-765-LT.jpg",
-      name: "Sports Cars",
+      img: "https://i.ibb.co.com/rpPdQZK/Pizza-Man.jpg",
+      name: "Micheal Philips",
       description:
-        "A high-performance sports car with a lightweight design and powerful engine.",
+        "If you're looking for high-performance sports cars, this is the place! Excellent service and an impressive lineup.",
+      rating: 5,
     },
     {
-      img: "https://i.ibb.co.com/cYF5MQV/2020-Tesla-Model-S.jpg",
-      name: "Electric Cars",
+      img: "https://i.ibb.co.com/rpPdQZK/Pizza-Man.jpg",
+      name: "Jane Jordan",
       description:
-        "An all-electric luxury sedan offering impressive range and cutting-edge technology.",
+        "The best place to buy electric cars. Their Tesla collection is incredible, and the customer service is exceptional.",
+      rating: 4.5,
     },
     {
-      img: "https://i.ibb.co.com/JtRxZTt/download-1.jpg",
-      name: "SUV Cars",
+      img: "https://i.ibb.co.com/rpPdQZK/Pizza-Man.jpg",
+      name: "Ibrahim S",
       description:
-        "A versatile SUV with ample space and great off-road capabilities.",
+        "Loved the variety of SUVs available! Found the perfect one for my family with the help of their great team.",
+      rating: 4.5,
     },
   ];
+
   return (
     <Container>
-      <div className="flex justify-center items-center">
-        <h2 className="text-4xl font-bold">What CLient Says</h2>
-      </div>
-
-      <div className="flex justify-center items-center">
-        <Carousel
-          opts={{
-            align: "start",
-          }}
-          className="w-full max-w-7xl"
-        >
-          <CarouselContent>
-            {reviews.map((review, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 ">
-                <div className="p-1 ">
-                  <Card className="relative">
-                    <CardContent className="flex aspect-square items-center justify-center p-6 overflow-hidden relative">
-                      <div className="relative w-full h-64 overflow-hidden rounded-md">
-                        <Image
-                          src={review.img}
-                          width={600}
-                          height={600}
-                          alt={review.name}
-                          className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"
-                        />
-                        {/* Text Overlay on Image */}
-                        <div className="bg-yellow-600 p-2 rounded-full font-bold text-sm absolute left-2 bottom-2 z-10">
-                          <div className="flex justify-center items-center">
-                            <p className="bg-white text-black rounded-full py-1 px-3.5">
-                              {index + 1}
-                            </p>
-                            <h1 className="px-2">{review.name}</h1>
+      <div className="my-24">
+        <div className="flex justify-center items-center my-6">
+          <h2 className="text-4xl font-bold">What Client Says</h2>
+        </div>
+        <div className="flex justify-center items-center my-12">
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            className="w-full max-w-7xl"
+          >
+            <CarouselContent>
+              {reviews.map((review, index) => (
+                <CarouselItem
+                  key={index}
+                  className="md:basis-1/2 lg:basis-1/3 "
+                >
+                  <div className="p-1 ">
+                    <Card className="relative">
+                      <CardContent className="p-6 ">
+                        <div>
+                          <div className="flex justify-start">
+                            <FaQuoteLeft className="w-16 h-16 text-amber-600" />
+                          </div>
+                          <div className="my-2">
+                            <p className="text-base">{review.description}</p>
                           </div>
                         </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
-
-      <div className="flex justify-center items-center gap-1">
-        <FaExclamation className=" text-amber-500" />
-        <div>
-          <p className="text-sm text-amber-600 underline ">
-            If you've never bought a car before, we'll guide you through the
-            process.
-          </p>
+                      </CardContent>
+                      <CardFooter>
+                        <div className="flex items-center justify-between w-full">
+                          <div>
+                            <Image
+                              width={400}
+                              height={400}
+                              src={review.img}
+                              alt="review"
+                              className=" object-cover h-12 w-12 rounded-full"
+                            />
+                          </div>
+                          <div>
+                            <h3 className="text-lg text-amber-600 font-bold">
+                              {review.name}
+                            </h3>
+                          </div>
+                        </div>
+                      </CardFooter>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </Container>

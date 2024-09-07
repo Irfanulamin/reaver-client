@@ -5,13 +5,13 @@ import { FaExclamation } from "react-icons/fa";
 const ProcessSection = () => {
   return (
     <Container>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mt-24">
         <h2 className="text-4xl font-bold">
           Car Buying <span className="text-amber-600">Process</span>
         </h2>
       </div>
-      <div className="flex justify-center items-center my-44 gap-12">
-        <div className="flex flex-col justify-center items-start">
+      <div className="flex justify-center items-center  my-24 gap-12">
+        <div className="flex flex-col justify-center items-start border border-black py-12 px-6 rounded-md">
           <div>
             <h2 className="text-3xl font-bold text-left">Choose A Car</h2>
           </div>
@@ -24,7 +24,7 @@ const ProcessSection = () => {
             <p className="text-xl font-medium">01</p>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-start">
+        <div className="flex flex-col justify-center items-start border border-black p-2 rounded-md py-12 px-6">
           <div>
             <h2 className="text-3xl font-bold text-left">Come In Contact</h2>
           </div>
@@ -38,7 +38,7 @@ const ProcessSection = () => {
             <p className="text-xl font-medium">02</p>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-start">
+        <div className="flex flex-col justify-center items-start border border-black p-2 rounded-md py-12 px-6">
           <div>
             <h2 className="text-3xl font-bold text-left">Enjoy Driving</h2>
           </div>
@@ -53,7 +53,7 @@ const ProcessSection = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center gap-1">
+      <div className="flex justify-center items-center gap-1 mb-24">
         <FaExclamation className=" text-amber-500" />
         <div>
           <p className="text-sm text-amber-600 underline ">

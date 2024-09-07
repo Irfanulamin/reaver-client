@@ -23,6 +23,9 @@ const HomePage = () => {
         <div className="w-[5px] h-[100px] bg-amber-500 glow-text"></div>
       </div>
       <ProcessSection />
+      <div className="flex justify-center items-center">
+        <div className="w-[5px] h-[100px] bg-amber-500 glow-text"></div>
+      </div>
       <ClientSection />
     </div>
   );
