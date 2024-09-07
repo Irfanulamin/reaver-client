@@ -70,11 +70,18 @@
 }
 
 .banner {
+  width: 80%;
+  height: 500px;
+  background-position: center;
+  background-size: cover; /* Change to contain or use percentages */
+  background-repeat: no-repeat; /* Ensure no repeat */
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
     url("/banner.jpg");
-  background-size: cover;
-  background-position: center center;
-  height: 100%;
 }
 
 .glow-text {

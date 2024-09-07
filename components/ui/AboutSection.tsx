@@ -8,16 +8,16 @@ import { LuCheckSquare } from "react-icons/lu";
 const AboutSection = () => {
   return (
     <Container>
-      <div className="flex justify-center items-center gap-x-12 my-24">
+      <div className="flex justify-center items-center gap-x-12 my-44">
         <div className="flex flex-col justify-center items-start">
           <div>
-            <h2 className=" font-extrabold text-4xl">
+            <h2 className=" font-extrabold text-5xl">
               We are More than <br />
               <span className="text-amber-600">A Car Store</span>
             </h2>
           </div>
           <div className="py-2 ">
-            <p className=" text-base ">
+            <p className=" text-lg ">
               we're not just about selling vehicles; we're about enhancing your
               driving experience. <br /> Our commitment goes beyond providing
               you with a car—it’s about <br /> delivering excellence and
@@ -30,7 +30,7 @@ const AboutSection = () => {
                 <IoCheckmarkDoneSharp className="text-amber-600 w-6 h-6" />
               </div>
               <div>
-                <p className="tracking-wider">Luxury & Sports Cars</p>
+                <p className="tracking-wider text-xl">Luxury & Sports Cars</p>
               </div>
             </div>
             <div className="flex justify-center items-center gap-x-2">
@@ -38,7 +38,7 @@ const AboutSection = () => {
                 <IoCheckmarkDoneSharp className="text-amber-600 w-6 h-6" />
               </div>
               <div>
-                <p className="tracking-wider">Economy Cars</p>
+                <p className="tracking-wider text-xl">Economy Cars</p>
               </div>
             </div>
           </div>
@@ -48,13 +48,13 @@ const AboutSection = () => {
             </button>
           </div>
         </div>
-        <div className="relative overflow-hidden">
+        <div className=" overflow-hidden">
           <Image
             src={aboutUS}
-            height={900}
-            width={900}
+            height={2000}
+            width={2000}
             alt="about-us"
-            className="w-full h-72 object-cover transition-transform duration-300 transform hover:scale-110 clip-path "
+            className="w-full h-96 object-cover transition-transform duration-300 transform hover:scale-110  rounded-md"
           />
         </div>
       </div>

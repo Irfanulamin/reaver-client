@@ -10,7 +10,7 @@ const Banner = () => {
   return (
     <>
       <div className="h-full">
-        <div className="banner relative">
+        <div className="bg-slate-800 relative">
           <div className="py-24 lg:py-72">
             <div className="flex flex-col-reverse md:flex-row lg:flex-row justify-center items-center w-full px-2 md:px-12 lg:px-24">
               <motion.div
@@ -50,7 +50,7 @@ const Banner = () => {
                     width={500}
                     height={500}
                     alt="icon"
-                    className=" hidden md:block lg:block rotate-image"
+                    className=" hidden md:block lg:block rotate-image drop-shadow-2xl"
                   />
                 </motion.div>
               </div>
@@ -73,7 +73,7 @@ const Banner = () => {
                 </p>
               </div>
               <div>
-                <p className="text-sm md:text-2xl font-extrabold text-white">
+                <p className="text-sm md:text-2xl font-extrabold text-white ">
                   V8 Engine
                 </p>
               </div>
