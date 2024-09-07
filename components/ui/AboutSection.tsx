@@ -4,6 +4,7 @@ import Image from "next/image";
 import aboutUS from "@/public/aboutus.jpg";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { LuCheckSquare } from "react-icons/lu";
+import { Button } from "./button";
 
 const AboutSection = () => {
   return (
@@ -11,7 +12,7 @@ const AboutSection = () => {
       <div className="flex justify-center items-center gap-x-12 my-44">
         <div className="flex flex-col justify-center items-start">
           <div>
-            <h2 className=" font-extrabold text-5xl">
+            <h2 className=" font-bold text-5xl">
               We are More than <br />
               <span className="text-amber-600">A Car Store</span>
             </h2>
@@ -43,9 +44,9 @@ const AboutSection = () => {
             </div>
           </div>
           <div className="py-4">
-            <button className="bg-yellow-500 text-black hover:bg-black hover:text-yellow-500 transition_custom p-4 rounded-full">
-              Learn More <LuCheckSquare className="inline-block " />
-            </button>
+            <Button variant="yellow">
+              Learn More <LuCheckSquare className="mx-1 inline-block " />
+            </Button>
           </div>
         </div>
         <div className=" overflow-hidden">

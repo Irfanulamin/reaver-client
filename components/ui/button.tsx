@@ -11,8 +11,8 @@ const buttonVariants = cva(
       variant: {
         default:
           "bg-transparent p-2 border border-white hover:bg-white text-white hover:text-black transition  rounded-none ",
-        destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+        yellow:
+          "bg-yellow-500 text-black hover:bg-black hover:text-yellow-500 transition_custom p-4 rounded-full ",
         outline:
           "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
         secondary:
