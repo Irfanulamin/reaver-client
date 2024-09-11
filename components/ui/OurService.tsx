@@ -75,16 +75,15 @@ const OurService = () => {
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 ">
                 <div className="p-1 ">
                   <Card className="relative">
-                    <CardContent className="flex aspect-square items-center justify-center p-6 overflow-hidden relative">
+                    <CardContent className="flex aspect-square items-center justify-center p-2 overflow-hidden relative">
                       <div className="relative w-full h-64 overflow-hidden rounded-md">
                         <Image
                           src={car.img}
-                          width={600}
-                          height={600}
+                          width={500}
+                          height={500}
                           alt={car.name}
                           className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"
                         />
-                        {/* Text Overlay on Image */}
                         <div className="bg-yellow-600 p-2 rounded-full font-bold text-sm absolute left-2 bottom-2 z-10">
                           <div className="flex justify-center items-center">
                             <p className="bg-white text-black rounded-full py-1 px-3.5">
@@ -100,8 +99,6 @@ const OurService = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
         </Carousel>
       </div>
     </Container>

@@ -10,7 +10,7 @@ const ProcessSection = () => {
           Car Buying <span className="text-amber-600">Process</span>
         </h2>
       </div>
-      <div className="flex justify-center items-center  my-24 gap-12">
+      <div className="flex flex-col md:flex-row lg:flex-row justify-center items-center  my-24 gap-12">
         <div className="flex flex-col justify-center items-start border border-black py-12 px-6 rounded-md">
           <div>
             <h2 className="text-3xl font-bold text-left">Choose A Car</h2>

@@ -9,7 +9,7 @@ import { Button } from "./button";
 const AboutSection = () => {
   return (
     <Container>
-      <div className="flex justify-center items-center gap-x-12 my-44">
+      <div className="flex flex-col md:flex-row lg:flex-row justify-center items-center gap-x-12 my-44">
         <div className="flex flex-col justify-center items-start">
           <div>
             <h2 className=" font-bold text-5xl">
